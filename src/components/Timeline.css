@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #03001C;
+    color: #3795BD;
+}
+
+.heading {
+    text-align: center;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #F7EFE5;
+}
+
+.heading span {
+    color: #FABC3F;
+
+}
+
+.timeline {
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 9%;
+}
+
+.timeline-row {
+    display: flex;
+    column-gap: 64px;
+    flex-wrap: wrap;
+}
+
+.timeline-column {
+    flex: 1 1 320px;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    margin: 32px 0 16px 30px;
+    color: #F7EFE5;
+}
+
+.education-box {
+    
+    border-left: .2px solid #F7EFE5;
+    cursor: pointer;
+}
+
+.education-content {
+    position: relative;
+    padding-left: 27px;
+
+}
+
+.education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10.5px;
+    width: 20px;
+    height: 20px;
+    background: #FABC3F;
+    border-radius: 50%;
+}
+
+.content {
+    padding: 24px;
+    border: .2px solid #FABC3F;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.content:hover {
+    box-shadow: 6px 6px 12px 0px #FABC3F;
+    border: 1px solid transparent;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 3.8%;
+    width: 0%;
+    height: 100%;
+    background: #F7EFE5;
+    z-index: -1;
+    transition: .5s;
+    border-radius: 8px;
+}
+
+.content:hover::before {
+    width: 96.3%;
+}
+
+.year {
+    font-size: 16px;
+    color: var(--main-color);
+    color: #FABC3F;
+
+}
+
+.content:hover .year {
+    color: #071952;
+    font-weight: 500;
+}
+
+.icon {
+    padding-right: 8px;
+}
+
+.content:hover .icon {
+    font-size: 20px;
+
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.content:hover h3 {
+    color: #FB773C;
+    font-weight: bold;
+
+}
+
+p {
+
+    color: #F7EFE5;
+}
+
+.content:hover p {
+    color: #435585;
+    font-weight: 500;
+}
+
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105%;
+    height: 100%;
+    background: #03001C;
+    animation: show-right 1s ease forwards;
+    animation-delay: calc(.5s * var(--i));
+}
+
+@keyframes show-right {
+    100% {
+        width: 0;
+    }
+}

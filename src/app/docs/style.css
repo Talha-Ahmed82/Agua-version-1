@@ -1,0 +1,93 @@
+/* h1{margin-left: 60px;}
+div{background-color: goldenrod;
+width: 20%;
+height: 60px;
+border-radius: 30px;
+border: 1px solid black;
+display: flex;
+justify-self:center;} */
+/* General Reset */
+/* General Reset */
+/* General Reset */
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .download-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #d4af37, #c0c0c0); 
+  }
+  
+  .card-heading {
+    font-size: 2.5rem;
+    color: #2b1717;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: -50px;
+    background: linear-gradient(135deg, #d4af37, #c0c0c0); 
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .download-content {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    margin-top: 100px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d4af37; 
+  }
+  
+  .download-content h2 {
+    font-size: 2rem;
+    color: #d4af37; 
+    margin-bottom: 10px;
+  }
+  
+  .download-content p {
+    font-size: 1rem;
+    color: #7d7d7d; 
+    margin-bottom: 20px;
+  }
+  
+  .download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #d4af37, #c0c0c0); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #d4af37;
+  }
+  
+  .download-button:hover {
+    background: linear-gradient(135deg, #c0c0c0, #d4af37); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .download-button .icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+  

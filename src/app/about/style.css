@@ -1,0 +1,9 @@
+.download-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #d4af37, #c0c0c0); 
+  }
+  

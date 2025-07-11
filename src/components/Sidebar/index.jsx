@@ -112,7 +112,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
-        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark  lg:translate-x-0 ${
+        className={`fixed left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-[#272727]  lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -156,7 +156,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
             {menuGroups.map((group, groupIndex) => (
               <div key={groupIndex}>
-                <h3 className="mb-4 ml-4 text-sm bg-white font-semibold text-boxdark dark:text-[#F1BE11] dark:bg-boxdark">
+                <h3 className="mb-4 ml-4 font-lora text-sm bg-white font-semibold text-yellow-400 dark:text-gray-500 dark:bg-[#272727]">
                   {group.name}
                 </h3>
 

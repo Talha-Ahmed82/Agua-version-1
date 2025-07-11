@@ -9,17 +9,18 @@ const CardDataStats = ({
   children,
 }) => {
   return (
-    <div className="rounded-xl border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-      <div className="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2  dark:bg-meta-4">
+    <div className="rounded-xl  border border-yellow-500 dark:border-white bg-white px-6 shadow-default dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727]">
+      
+
+      <div className="flex items-center justify-between">
+      <div className="flex h-11.5 w-16.5 items-center justify-center mr-4 rounded-full">
         {children}
       </div>
-
-      <div className="mt-4 flex items-end justify-between">
         <div>
-          <h4 className="text-title-md font-bold text-black dark:text-white">
-            {total}
+          <h4 className="text-lg font-semibold text-black dark:text-gray-200">
+            {title}
           </h4>
-          <span className="text-sm font-medium dark:text-[#F1BE11]">{title}</span>
+          <span className="text-sm font-medium text-yellow-500 dark:text-white">{total}</span>
         </div>
 
         <span

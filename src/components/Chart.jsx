@@ -182,7 +182,7 @@ function Chart() {
           src="/Animate-8.png"
           className="absolute top-0 left-0 w-full h-full opacity-30 object-cover z-0"
         /> */}
-        <h1 className="font-merry text-5xl md:text-6xl text-yellow-400 text-center pt-6 ">
+        <h1 className="font-mont text-4xl font-medium md:text-5xl text-yellow-400 text-center pt-6 ">
           Tokenomics
         </h1>
         <div className="flex flex-col lg:flex-row w-full h-auto space-y-10 lg:space-y-0 font-san lg:space-x-20 justify-center items-center">
@@ -229,15 +229,15 @@ function Chart() {
                     <div className="flex items-center gap-2">
                       {/* Bullet Point */}
                       {/* <span className="w-2.5 h-2.5 bg-white rounded-full"></span> */}
-                      <p className="text-sm sm:text-base font-roboto lg:text-xl font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#F6F700] bg-clip-text text-transparent">
+                      <p className="text-sm sm:text-base font-lora lg:text-xl font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#F6F700] bg-clip-text text-transparent">
                         {item.title}
                       </p>
                     </div>
-                    <p className="text-sm sm:text-base font-roboto lg:text-lg font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#9C7509] bg-clip-text text-transparent">
+                    <p className="text-sm sm:text-base font-lora lg:text-lg font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#9C7509] bg-clip-text text-transparent">
                       {item.percentage}
                     </p>
                   </div>
-                  <p className="text-sm sm:text-base lg:text-lg text-white mt-2 font-roboto break-words">
+                  <p className="text-sm sm:text-base lg:text-lg text-white mt-2 font-lora break-words">
                     {item.description}
                   </p>
                   <div className="w-full bg-gray-400 mt-2 rounded-full h-1 dark:bg-gray-700">
@@ -259,7 +259,7 @@ function Chart() {
             ></div>
             {/* <PieChart /> */}
 
-            <div className="mt-4 flex flex-wrap justify-center font-roboto items-start gap-4 text-center">
+            <div className="mt-4 flex flex-wrap justify-center font-lora items-start gap-4 text-center">
               {chartData.map((item, index) => (
                 <div
                   key={index}
@@ -311,15 +311,15 @@ function Chart() {
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
                       {/* <span className="w-2.5 h-2.5 bg-white rounded-full"></span> */}
-                      <p className="text-sm sm:text-base lg:text-xl font-roboto font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#F6F700] bg-clip-text text-transparent">
+                      <p className="text-sm sm:text-base lg:text-xl font-lora font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#F6F700] bg-clip-text text-transparent">
                         {item.title}
                       </p>
                     </div>
-                    <p className="text-sm sm:text-base font-roboto lg:text-lg font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#9C7509] bg-clip-text text-transparent">
+                    <p className="text-sm sm:text-base font-lora lg:text-lg font-bold bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#9C7509] bg-clip-text text-transparent">
                       {item.percentage}
                     </p>
                   </div>
-                  <p className="text-sm sm:text-base lg:text-lg text-white font-roboto mt-2 break-words">
+                  <p className="text-sm sm:text-base lg:text-lg text-white font-lora mt-2 break-words">
                     {item.description}
                   </p>
                   <div className="w-full bg-gray-400 mt-2 rounded-full h-1 dark:bg-gray-700">

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="w-full overflow-x-hidden font-san">
       {/* <CanvasScene /> */}
-      <footer className=" w-full text-white bg-gold-silver">
+      <footer className=" w-full text-white bg-gradient-radial gradient-bg">
         {/* <hr className="" /> */}
         <div className="  max-w-full  p-12    bg-white bg-opacity-10 backdrop-blur-sm overflow-x-hidden  py-6 lg:py-16">
           <div className="md:flex md:justify-between">
@@ -18,7 +18,7 @@ export default function Footer() {
                 />
               </a>
               {/* <p className=" px-2 text-3xl font-semibold ">Agua</p> */}
-              <p className="mt-2 font-roboto">
+              <p className="mt-2 font-lora">
                 {" "}
                 Discover the power of our
                 <br /> secure and rewarding
@@ -27,10 +27,10 @@ export default function Footer() {
             </div>
             <div className="grid grid-cols-3 gap-20 sm:gap-6 sm:grid-cols-6 ">
               <div>
-                <h2 className="mb-6 font-semibold font-merry  text-lg text-white ">
+                <h2 className="mb-6 font-semibold font-lora  text-lg text-white ">
                   About us
                 </h2>
-                <ul className=" text-white font-roboto text-base font-medium">
+                <ul className=" text-white font-lora text-base font-medium">
                   <li className="mb-4">
                     <a href="/" className="hover:underline">
                       Home
@@ -96,10 +96,10 @@ export default function Footer() {
                 </ul>
               </div> */}
               <div>
-                <h2 className="mb-6  font-semibold  font-merry text-lg ">
+                <h2 className="mb-6  font-semibold  font-lora text-lg ">
                   Usefull Links
                 </h2>
-                <ul className="font-roboto font-medium">
+                <ul className="font-lora font-medium">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
                       SAG Smart Contract

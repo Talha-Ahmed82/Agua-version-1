@@ -337,7 +337,7 @@ const HorizontalScrollCarousel = () => {
           className="absolute top-0 left-0 w-full h-full opacity-30 object-cover z-0"
         /> */}
         {/* <CanvasScene /> */}
-        <h1 className="font-merry text-5xl md:text-6xl  text-yellow-400 text-center pt-6 ">
+        <h1 className="font-mont text-4xl font-medium md:text-5xl  text-yellow-400 text-center pt-6 ">
           Operations
         </h1>
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">

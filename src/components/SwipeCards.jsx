@@ -453,7 +453,7 @@ const SwipeCards = () => {
       >
         {/* <CanvasScene /> */}
         {/* Left div */}
-        <div className="grid md:w-[550px] place-items-center">
+        <div className="grid md:w-[550px] place-items-center font-lora">
           {cards.map((card) => (
             <Card key={card.id} cards={cards} setCards={setCards} {...card} />
           ))}

@@ -146,6 +146,8 @@ module.exports = {
                                 longhaul: ['Longhaul', ...defaultTheme.fontFamily.sans],
                                 racing: ['RacingMarkRace', ...defaultTheme.fontFamily.sans],
                                 san: "Orbitron, sans-serif",
+                                lora: "Lora",
+                                mont: "Montserrat",
                                 merry: "Merriweather, serif",
                                 poppins: "Poppins",
                                 maamli:  "Ga Maamli",

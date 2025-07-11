@@ -154,7 +154,7 @@ export default function CheckoutForm({ clientSecret }) {
       <button
         type="submit"
         disabled={!stripe || isProcessing}
-        className="mt-4 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+        className="mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
       >
         {isProcessing ? "Processing..." : "Pay Now"}
       </button>

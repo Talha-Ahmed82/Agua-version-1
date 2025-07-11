@@ -119,10 +119,10 @@ const Members = () => {
         /> */}
         <div className="font-san">
           {/* <CanvasScene /> */}
-          <p className="text-center text-gray-300 font-bold font-merry pt-4">
+          <p className="text-center text-gray-300 font-bold font-mont pt-4">
             OUR AMAZING
           </p>
-          <p className="text-center text-yellow-400 text-4xl font-merry font-extrabold">
+          <p className="text-center text-yellow-400 font-medium text-4xl font-mont">
             Team Of Experts
           </p>
         </div>
@@ -152,10 +152,10 @@ const Members = () => {
               />
             </figure>
             <div className="card-body font-times">
-              <h2 className="font-bold text-lg md:text-2xl text-white text-center font-roboto">
+              <h2 className="font-bold text-lg md:text-2xl text-white text-center font-lora">
                 Martin Mobarak
               </h2>
-              <p className="text-white font-times text-center text-base md:text-xl font-roboto">
+              <p className="text-white font-times text-center text-base md:text-xl font-lora">
                 Founder, CEO
               </p>
             </div>
@@ -169,7 +169,7 @@ const Members = () => {
                 className=""
               />
             </figure>
-            <div className="card-body font-roboto">
+            <div className="card-body font-lora">
               <h2 className="font-bold text-lg md:text-2xl text-white text-center">
                 Oscar Jarquin
               </h2>
@@ -190,7 +190,7 @@ const Members = () => {
                 className=""
               />
             </figure>
-            <div className="card-body font-roboto">
+            <div className="card-body font-lora">
               <h2 className="font-bold text-lg md:text-2xl text-white text-center">
                 Omar Mobarak
               </h2>

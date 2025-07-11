@@ -10,7 +10,7 @@ const DrawOutlineButton = ({ children, ...rest }) => {
   return (
     <button
       {...rest}
-      className="group relative px-4 py-2 h-14 gap-10 font-medium text-[#CFB302] transition-colors duration-[400ms] hover:text-white"
+      className="group relative px-4 py-2 h-14 gap-10 font-mont font-medium text-lg text-[#CFB302] transition-colors duration-[400ms] hover:text-white"
     >
       <span>{children}</span>
 

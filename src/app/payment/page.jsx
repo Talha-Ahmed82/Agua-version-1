@@ -49,19 +49,19 @@ const [alert, setAlert] = useState(false);
       id: 1,
       name: "Gold",
       price: 20,
-      img: "/Goldcoin.png", // Replace with your own image path
+      img: "/gold2.png", // Replace with your own image path
     },
     {
       id: 2,
       name: "AG (Silver)",
       price: 40,
-      img: "/sliver.png", // Replace with your own image path
+      img: "/silver1.png", // Replace with your own image path
     },
     {
       id: 3,
       name: "Agua",
       price: 10,
-      img: "/Agua-new-logo.png", // Replace with your own image path
+      img: "/Agua-newlogo.png", // Replace with your own image path
     },
   ];
 
@@ -688,49 +688,49 @@ async function TwoFunctionforStripe (){
   return (
     <DefaultLayout>
         <Breadcrumb pageName="Payment" />
-      <div className="mx-auto max-w-7xl p-8">
+      <div className="mx-auto max-w-7xl p-8 font-lora">
       
         {/* Stock Section */}
         <div className="mb-18">
-          <h1 className="mb-4 text-center text-2xl font-semibold text-gray-500   ">
-            Stock
+          <h1 className="mb-4 text-center text-2xl font-semibold text-black   ">
+            Stock Available
           </h1>
           <div className="flex flex-wrap justify-center gap-20">
             {[
               {
                 name: "Gold",
                 price: "$1500",
-                img: "/Goldcoin.png",
+                img: "/gold2.png",
                 tokens: 100,
               },
               {
                 name: "AG(Silver)",
                 price: "$2000",
-                img: "/sliver.png",
+                img: "/silver1.png",
                 tokens: 200,
               },
               {
                 name: "Agua",
                 price: "$3000",
-                img: "/Agua-new-logo.png",
+                img: "/Agua-newlogo.png",
                 tokens: 50,
               },
             ].map((stock, index) => (
               <div
                 key={index}
-                className="w-54 rounded-xl border-2 border-gray-600 bg-[#D2D8E1] dark:bg-[#24303F] p-4 text-center shadow-lg transition-all duration-300 ease-in-out"
+                className="w-54 rounded-xl border-2 border-yellow-500 dark:border-white bg-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727] p-4 text-center shadow-lg transition-all duration-300 ease-in-out"
               >
                 <div className="mx-auto mb-4 h-24 w-24">
                   <img
                     src={stock.img}
                     alt={`${stock.name} Logo`}
-                    className="h-full w-full rounded-full object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <div className="text-xl font-medium text-[#374151] dark:text-white">
                   {stock.name}
                 </div>
-                <div className="mt-2 text-lg font-semibold text-gray-400">
+                <div className="mt-2 text-lg font-semibold text-yellow-500 dark:text-gray-400">
                   {stock.tokens} Tokens
                 </div>
                 
@@ -746,32 +746,32 @@ async function TwoFunctionforStripe (){
     <div className="container mx-auto p-4">
       {/* Product List */}
       <div className="mb-8">
-        <h1 className="mb-4 text-center text-2xl font-semibold text-gray-500">
-        Tokens
+        <h1 className="mb-4 text-center text-2xl font-semibold text-black">
+        Select Tokens
         </h1>
         <div className="flex flex-wrap justify-center gap-20">
           {products.map((product) => (
             <div
               key={product.id}
-              className="w-40 cursor-pointer rounded-xl border border-[#374151] hover:shadow-xl p-2 text-center shadow-md"
+              className="w-40 cursor-pointer bg-white rounded-xl border border-yellow-500 dark:border-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727] hover:shadow-xl p-2 text-center shadow-md"
             >
               <div className="mx-auto mb-4 h-16 w-16">
                 <img
                   src={product.img}
                   alt={`${product.name}`}
-                  className="h-full w-full rounded-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
-              <div className="text-lg font-semibold text-gray-600">
+              <div className="text-lg font-semibold text-gray-600 dark:text-white">
               {product.name}
               </div>
-              <div className="text-base font-bold text-gray-600">
+              <div className="text-base font-bold text-yellow-500 dark:text-gray-400">
            
              price : ${product.price} 
               </div>
               <button
                 onClick={() => handleAddToCart(product)}
-               className="mt-2 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg "
+               className="mt-2 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg "
               >
                 Add to Cart
               </button>
@@ -781,12 +781,12 @@ async function TwoFunctionforStripe (){
       </div>
 
       {/* Cart Section */}
-      <div className="mb-8">
-        <h2 className="mb-4 text-center text-2xl font-semibold text-gray-500">
+      <div className="mb-8 bg-white rounded-lg p-8 border border-yellow-500 dark:border-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727]">
+        <h2 className="mb-4 text-center text-2xl font-semibold text-black dark:text-white">
           Your Cart
         </h2>
         {cart.length === 0 ? (
-          <p className="text-center text-gray-400">Your cart is empty</p>
+          <p className="text-center text-black dark:text-white">Your cart is empty</p>
         ) : (
           <div className="space-y-4">
             {cart.map((item) => (
@@ -801,14 +801,14 @@ async function TwoFunctionforStripe (){
                     className="h-12 w-12 rounded-full object-cover"
                   />
                   <div>
-                    <div className="font-semibold text-black">{item.name}</div>
-                    <div className="font-semibold text-sm text-black">
+                    <div className="font-semibold text-black dark:text-white">{item.name}</div>
+                    <div className="font-semibold text-sm text-yellow-500 dark:text-gray-400">
                     {/* Price : {item.price} × Qty {item.quantity} */}
                     Qty : {item.quantity} Tokens
                     {/* setno_Of_Token(item.quantity) */}
                     {/* */}
                     </div>
-                    <div className="font-semibold  text-sm text-black">
+                    <div className="font-semibold  text-sm text-yellow-500 dark:text-white">
                     Total:  {item.price * item.quantity}
                     
                       </div>
@@ -841,7 +841,7 @@ async function TwoFunctionforStripe (){
 
         {/* Total Section */}
         <div className="mt-4">
-          <div className="flex justify-between font-semibold text-lg text-gray-600">
+          <div className="flex justify-between font-semibold text-lg text-gray-600 dark:text-white">
             <span>Total</span>
             <span>${calculateTotal()}</span>
           </div>
@@ -853,7 +853,7 @@ async function TwoFunctionforStripe (){
             <button
              onClick={handleCheckout}
  
-             className="mt-2 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg hover:bg-blue-600">
+             className="mt-2 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg hover:bg-blue-600">
               Checkout
             </button>
           </div>
@@ -868,14 +868,14 @@ async function TwoFunctionforStripe (){
  
 {showPaymentOptions && (
   <div className="mt-8 border-t border-gray-300 pt-4">
-    <h2 className="mb-4 text-center text-xl font-semibold text-gray-500">
+    <h2 className="mb-4 text-center text-xl font-semibold text-black">
       Select Payment Method
     </h2>
     <div className="flex justify-center gap-8">
       {/* Stripe Payment */}
       <button
         onClick={() => setSelectedPaymentMethod("Stripe")}
-        className="w-50 bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+        className="w-50 border border-white bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
       >
         Stripe Card Payment
       </button>
@@ -883,7 +883,7 @@ async function TwoFunctionforStripe (){
       {/* Crypto Payment */}
       <button
         onClick={() => setSelectedPaymentMethod("Crypto")}
-        className="w-50 bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+        className="w-50 border border-white bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
       >
         Crypto Payment
       </button>
@@ -891,12 +891,12 @@ async function TwoFunctionforStripe (){
 
     {/* Stripe Payment Section */}
     {selectedPaymentMethod === "Stripe" && (
-       <div className="mt-8 p-4 border rounded-lg bg-gray-100">
-        <h3 className="mb-4 text-center text-lg font-semibold text-gray-500">
+       <div className="mt-8 p-4 rounded-lg bg-white border border-yellow-500 dark:border-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727]">
+        <h3 className="mb-4 text-center text-lg font-semibold text-black dark:text-white">
           Stripe Card Payment
         </h3>
-        <h2 className="text-2xl font-semibold text-gray-700 mb-6">
-        Your Selected Tokens:
+        <h2 className="text-xl font-semibold text-gray-700 dark:text-white  mb-6">
+        Your Selected Tokens
       </h2>
       <div className="space-y-4">
         {cart.map((item) => (
@@ -911,15 +911,15 @@ async function TwoFunctionforStripe (){
                 className="h-12 w-12 rounded-full object-cover"
               />
               <div>
-                <div className="text-lg font-semibold text-gray-600">
+                <div className="text-lg font-semibold text-gray-600 dark:text-white">
                   {item.name}
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-yellow-500 dark:text-gray-400">
                   {item.price} × {item.quantity}
                 </div>
               </div>
             </div>
-            <div className="text-lg font-semibold text-gray-600">
+            <div className="text-lg font-semibold text-gray-600 dark:text-white">
               $
               {item.price * item.quantity}
             </div>
@@ -928,7 +928,7 @@ async function TwoFunctionforStripe (){
       </div>
 
       {/* Total Section */}
-      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700">
+      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700 dark:text-white">
         <span>Total</span>
         <span>
           $
@@ -942,7 +942,7 @@ async function TwoFunctionforStripe (){
 
         {showPayNowButton && (  <button
           onClick={TwoFunctionforStripe}
-          className="mt-4 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+          className="mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
         >
           Pay Now with Card
         </button>
@@ -962,13 +962,13 @@ async function TwoFunctionforStripe (){
     {/* Crypto Payment Options */}
     {selectedPaymentMethod === "Crypto" && (
       <div className="mt-8">
-        <h3 className="mb-4 text-center text-lg font-semibold text-gray-500">
+        <h3 className="mb-4 text-center text-lg font-semibold text-black">
           Select Crypto Option
         </h3>
         <div className="flex justify-center gap-8">
           <button
             onClick={() => setSelectedCryptoOption("Polygon")}
-            className="w-50 bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+            className="w-50 border border-white bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
           >
             Polygon
           </button>
@@ -980,7 +980,7 @@ async function TwoFunctionforStripe (){
           </button> */}
           <button
             onClick={() => setSelectedCryptoOption("Ethereum")}
-            className="w-50 bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+            className="w-50 border border-white bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
           >
             Ethereum
           </button>
@@ -1007,17 +1007,17 @@ async function TwoFunctionforStripe (){
   </div>
 )} */}
 {selectedCryptoOption === "Polygon" && selectedPaymentMethod === "Crypto" && (
-  <div className="mt-8 p-4 border rounded-lg bg-gray-100">
-    <h3 className="mb-4 text-center text-lg font-semibold text-gray-500">
+  <div className="mt-8 p-4 border rounded-lg bg-white border-yellow-500 dark:border-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727]">
+    <h3 className="mb-4 text-center text-lg font-semibold text-black dark:text-white">
       Pay with Polygon
     </h3>
-    <p className="text-center text-sm text-gray-700">
+    {/* <p className="text-center text-sm text-black">
       Proceed with your Polygon payment here.
-    </p>
+    </p> */}
     
  
-    <h2 className="text-2xl font-semibold text-gray-700 mb-6">
-        Your Selected Tokens:
+    <h2 className="text-xl font-semibold text-gray-700 dark:text-white mb-6">
+        Your Selected Tokens
       </h2>
       <div className="space-y-4">
         {cart.map((item) => (
@@ -1032,15 +1032,15 @@ async function TwoFunctionforStripe (){
                 className="h-12 w-12 rounded-full object-cover"
               />
               <div>
-                <div className="text-lg font-semibold text-gray-600">
+                <div className="text-lg font-semibold text-gray-600 dark:text-white">
                   {item.name}
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-yellow-500 dark:text-gray-400">
                   {item.price} × {item.quantity}
                 </div>
               </div>
             </div>
-            <div className="text-lg font-semibold text-gray-600">
+            <div className="text-lg font-semibold text-gray-600 dark:text-white">
               $
               {item.price * item.quantity}
             </div>
@@ -1049,7 +1049,7 @@ async function TwoFunctionforStripe (){
       </div>
 
       {/* Total Section */}
-      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700">
+      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700 dark:text-white">
         <span>Total</span>
         <span>
           $
@@ -1065,7 +1065,7 @@ async function TwoFunctionforStripe (){
     {/* Pay Now Button */}
     <button
       onClick={() => twoFunctionForPolyGon()}
-      className="mt-4 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+      className="mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
     >
       Pay Now
     </button>
@@ -1092,19 +1092,19 @@ async function TwoFunctionforStripe (){
 
     {selectedCryptoOption === "Ethereum" && selectedPaymentMethod === "Crypto" && (
       <div className="mt-8">
-        <h3 className="mb-4 text-center text-lg font-semibold text-gray-500">
+        <h3 className="mb-4 text-center text-lg font-semibold text-black">
           Select Ethereum Option
         </h3>
         <div className="flex justify-center gap-8">
           <button
             onClick={() => setEthereumSubCategory("USDT")}
-            className="w-50 bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A]  text-white py-2 rounded-lg"
+            className="w-50 border border-white bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603]  text-white py-2 rounded-lg"
           >
             USDT
           </button>
           <button
             onClick={() => setEthereumSubCategory("Ethers")}
-            className="w-50 bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+            className="w-50 border border-white bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
           >
             Ethers
           </button>
@@ -1112,15 +1112,15 @@ async function TwoFunctionforStripe (){
 
         {/* Ethereum Subcategories */}
         {ethereumSubCategory === "USDT" && (
-          <div className="mt-8 p-4 border rounded-lg bg-gray-100">
-            <h3 className="mb-4 text-center text-lg font-semibold text-gray-500">
+          <div className="mt-8 p-4 border rounded-lg bg-white border-yellow-500 dark:border-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727]">
+            <h3 className="mb-4 text-center text-lg font-semibold text-black dark:text-white">
             Pay with USDT
             </h3>
-            <p className="text-center text-sm text-gray-700">
+            {/* <p className="text-center text-sm text-gray-700">
               Proceed with your USDT payment here.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-6">
-        Your Selected Tokens:
+            </p> */}
+            <h2 className="text-xl font-semibold text-gray-700 dark:text-white mb-6">
+        Your Selected Tokens
       </h2>
       <div className="space-y-4">
         {cart.map((item) => (
@@ -1135,15 +1135,15 @@ async function TwoFunctionforStripe (){
                 className="h-12 w-12 rounded-full object-cover"
               />
               <div>
-                <div className="text-lg font-semibold text-gray-600">
+                <div className="text-lg font-semibold text-gray-600 dark:text-white">
                   {item.name}
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-yellow-500 dark:text-gray-400">
                   {item.price} × {item.quantity}
                 </div>
               </div>
             </div>
-            <div className="text-lg font-semibold text-gray-600">
+            <div className="text-lg font-semibold text-gray-600 dark:text-white">
               $
               {item.price * item.quantity}
             </div>
@@ -1152,7 +1152,7 @@ async function TwoFunctionforStripe (){
       </div>
 
       {/* Total Section */}
-      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700">
+      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700 dark:text-white">
         <span>Total</span>
         <span>
           $
@@ -1166,7 +1166,7 @@ async function TwoFunctionforStripe (){
 
             <button
               onClick={() => TwoFunctionForUSDT()}
-              className="mt-4 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+              className="mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
             >
               Pay Now
             </button>
@@ -1174,12 +1174,12 @@ async function TwoFunctionforStripe (){
         )}
 
         {ethereumSubCategory === "Ethers" && (
-          <div className="mt-8 p-4 border rounded-lg bg-gray-100">
-            <h3 className="mb-4 text-center text-lg font-semibold text-gray-500">
+          <div className="mt-8 p-4 border rounded-lg bg-white border-yellow-500 dark:border-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727]">
+            <h3 className="mb-4 text-center text-lg font-semibold text-black dark:text-white">
             Pay with Ethers
             </h3>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-6">
-        Your Selected Tokens:
+            <h2 className="text-xl font-semibold text-black dark:text-white mb-6">
+        Your Selected Tokens
       </h2>
       <div className="space-y-4">
         {cart.map((item) => (
@@ -1194,15 +1194,15 @@ async function TwoFunctionforStripe (){
                 className="h-12 w-12 rounded-full object-cover"
               />
               <div>
-                <div className="text-lg font-semibold text-gray-600">
+                <div className="text-lg font-semibold text-gray-600 dark:text-white">
                   {item.name}
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-yellow-500 dark:text-gray-400">
                   {item.price} × {item.quantity}
                 </div>
               </div>
             </div>
-            <div className="text-lg font-semibold text-gray-600">
+            <div className="text-lg font-semibold text-gray-600 dark:text-white">
               $
               {item.price * item.quantity}
             </div>
@@ -1211,7 +1211,7 @@ async function TwoFunctionforStripe (){
       </div>
 
       {/* Total Section */}
-      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700">
+      <div className="mt-6 flex justify-between font-semibold text-xl text-gray-700 dark:text-white">
         <span>Total</span>
         <span>
           $
@@ -1225,7 +1225,7 @@ async function TwoFunctionforStripe (){
 
             <button
               onClick={() => twoFunctionForEthers()}
-              className="mt-4 w-full bg-gradient-to-r from-[#9C883A] via-[#F5DE00] to-[#9C883A] text-white py-2 rounded-lg"
+              className="mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-400 to-[#C88603] text-white py-2 rounded-lg"
             >
               Pay Now
             </button>

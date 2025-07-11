@@ -397,7 +397,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import { useRouter } from "next/navigation";
-import Example2 from "./Example2";
+import Example1 from "./Example1";
 
 export default function SlideTabsExample() {
   return <SlideTabs />;
@@ -446,7 +446,7 @@ const SlideTabs = () => {
                 opacity: 0,
               }));
             }}
-            className="relative mx-auto mr-4 sm:mr-16 md:mr-0 flex border-2 rounded-3xl border-b-2 border-[#D0C80D] bg-transparent"
+            className="relative mx-auto font-mont mr-4 sm:mr-16 md:mr-0 flex border-2 rounded-3xl border-b-2 border-[#D0C80D] bg-transparent"
           >
             <Tab onClick={handleNav} setPosition={setPosition}>
               Home
@@ -465,8 +465,8 @@ const SlideTabs = () => {
 
         {/* Buttons */}
         <div className="mt-0 md:mt-4 mb-4 md:mb-0 space-x-4">
-          <Example2 onClick={handleNavigational} buttonName="SignIn" />
-          <Example2 onClick={<ConnectWallet />} buttonName="Connect Wallet" />
+          <Example1 onClick={handleNavigational} buttonName="SignIn" />
+          <Example1 onClick={<ConnectWallet />} buttonName="Connect Wallet" />
         </div>
       </div>
     </>

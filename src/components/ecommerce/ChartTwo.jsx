@@ -97,24 +97,24 @@ const ChartTwo = () => {
   ];
 
   return (
-    <div className="col-span-12 rounded-xl border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
+    <div className="col-span-12 rounded-xl border border-yellow-500 dark:border-white bg-white p-7.5 shadow-default dark:bg-gradient-to-r dark:from-gray-700 dark:via-[#272727] dark:to-[#272727] xl:col-span-4">
       <div className="mb-4 justify-between gap-4 sm:flex">
         <div>
-          <h4 className="text-xl font-semibold text-black dark:text-white">
+          <h4 className="text-xl font-lora font-semibold text-black dark:text-white">
             Profit this week
           </h4>
         </div>
         <div>
-          <div className="relative z-20 inline-block">
+          <div className="relative z-10 inline-block font-lora">
             <select
               name="#"
               id="#"
-              className="relative z-20 dark:text-white inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
+              className="relative z-10 text-black dark:text-white inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
             >
-              <option value="" className="dark:bg-boxdark dark:text-white">
+              <option value="" className="dark:bg-boxdark text-black dark:text-white">
                 This Week
               </option>
-              <option value="" className="dark:bg-boxdark dark:text-white">
+              <option value="" className="dark:bg-boxdark text-black dark:text-white">
                 Last Week
               </option>
             </select>

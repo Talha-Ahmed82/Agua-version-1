@@ -706,7 +706,7 @@ export const HeroSection = () => {
                 DAO for community.
               </h2>
 
-              <p className="text-sm sm:text-md md:text-lg text-gray-200 leading-relaxed font-roboto">
+              <p className="text-sm sm:text-md md:text-lg text-gray-200 leading-relaxed font-poppins">
                 Welcome to AGUA – A New Era of Financial Security. A stablecoin
                 fully backed by silver and gold, seamlessly integrating into the
                 world of decentralized finance (DeFi).

@@ -61,7 +61,7 @@ const Followus = () => {
 
 <div ref={divRes} className="bg-customgray mt-20 rounded-[10px]  ">
 {/* <CanvasScene /> */}
-<div className="text-center font-merry text-white text-2xl md:text-4xl pt-10 font-extrabold">
+<div className="text-center font-lora text-white text-2xl md:text-4xl pt-10 font-semibold">
   Stay tuned with our latest project<br /> updates or follow us on any of the social<br /> media channels below
 </div>
 
@@ -69,15 +69,15 @@ const Followus = () => {
   <input
     type="text"
     placeholder="Enter your Email"
-    className="input input-bordered w-5/6 max-w-xs md:max-w-none md:w-[440px] font-roboto"
+    className="input input-bordered w-5/6 max-w-xs md:max-w-none md:w-[440px] font-lora"
   />
-  <button className="btn font-roboto btn-active w-40 md:ml-2 mt-2 md:mt-0">
+  <button className="btn font-lora btn-active w-40 md:ml-2 mt-2 md:mt-0">
     Subscribe
   </button>
 </div>
 
 <div className=' '>
-<div className='text-white font-extrabold mt-4 text-center font-merry h-0 text-xl'>
+<div className='text-white font-extrabold mt-4 text-center font-lora h-0 text-xl'>
     Follow us on
 </div>
 <div className="flex h-36 items-center justify-center space-x-3 sm:space-x-12">

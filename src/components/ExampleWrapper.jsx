@@ -17,10 +17,10 @@ const ExampleWrapper = () => {
           src="/Animate-5.png"
           className="absolute top-0 left-0 w-full h-full opacity-50 object-cover z-0"
         /> */}
-          <h1 className="font-merry text-5xl md:text-6xl  text-yellow-400 text-center pt-6">
+          <h1 className="font-mont text-4xl md:text-5xl font-medium text-yellow-400 text-center pt-6">
             Roadmap
           </h1>
-          <ul className="timeline timeline-vertical">
+          <ul className="timeline timeline-vertical font-lora">
             <li>
               <div className="timeline-start md:w-60 h-14 w-38 mb-6 timeline-box bg-gradient-to-r from-[#F6F700] via-yellow-400 to-[#9C7509]">
                 <button
@@ -209,11 +209,11 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
               className="bg-gradient-to-br from-[#F6F700] to-yellow-500 text-white w-full p-6 rounded-lg max-w-lg shadow-xl cursor-default relative overflow-hidden"
             >
               <FiAlertCircle className="text-white/10 rotate-12 text-[250px] absolute z-0 -top-24 -left-24" />
-              <div className="relative z-10">
+              <div className="relative z-10 font-lora">
                 {/* <div className="bg-white w-16 h-16 mb-2 rounded-full text-3xl text-indigo-600 grid place-items-center mx-auto">
                   <FiAlertCircle />
                 </div> */}
-                <h3 className="text-3xl font-bold text-black text-center mb-2">
+                <h3 className="text-3xl font-bold text-black font-lora text-center mb-2">
                   Foundation and Whitepaper Finalization (Q3 2024)
                 </h3>
                 <p className="mb-4 text-black">

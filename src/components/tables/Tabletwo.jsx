@@ -37,7 +37,7 @@ const productData = [
 
 const TableTwo = () => {
   return (
-    <div id="Black" className="rounded-b-xl border border-[#D2D8E1] bg-[#D2D8E1] shadow-default dark:border-[#24303F] dark:bg-boxdark">
+    <div id="Black" className="rounded-b-xl border border-[#D2D8E1] bg-white shadow-default dark:border-[#24303F] dark:bg-boxdark">
       <div className="px-4 py-6 md:px-6 xl:px-7.5">
         <h4 className="text-xl font-semibold text-gray-500 dark:text-white">
           Black Listed

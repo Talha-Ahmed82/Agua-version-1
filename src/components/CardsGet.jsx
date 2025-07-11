@@ -1,131 +1,101 @@
-import React from "react";
-import { FaRegArrowAltCircleDown } from "react-icons/fa";
-import HiOutlineCamera from "react-icons/fa";
-import { GoCreditCard } from "react-icons/go";
-import CanvasScene from "./Animate";
+import React, { useEffect } from "react";
+import * as am5 from "@amcharts/amcharts5";
+import * as am5percent from "@amcharts/amcharts5/percent";
+import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
-export default function CardsGet() {
-  return (
-    <>
-    <div className="mx-auto py-40">
-      <div className="place-items-center text-center text-white flex justify-center">
-        <h2 className="text-3xl">HOW TO GET<br /> OUR CAS</h2>
-      </div>
+const DonutChart = () => {
+  useEffect(() => {
+    // Create root element
+    let root = am5.Root.new("chartdiv");
 
-      {/* <div class="grid grid-cols-1 md:grid-cols-3 w-full h-[550px] ">
-        <div class="flex items-center justify-center">
-          <div class="w-full h-[450px] mx-5   rounded-lg   p-6">
-            <div className=" top-48 px-6">
-              <div className="place-items-center text-white flex justify-center">
-                <FaRegArrowAltCircleDown className=" text-white w-8 h-8" />
-              </div>
-              <h2 className="text-white text-2xl text-center">RELIABILLITY</h2>
-              <p className="text-gray-300  text-sm text-start relative top-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-              </p>
-              <p className="text-gray-300  text-sm  text-center relative top-10">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-              </p>
-              <p></p>
-            </div>
-          </div>
-        </div>
+    // Disable the amCharts logo (requires a commercial license)
+    root._logo.dispose();
 
-        <div class="flex items-center justify-center">
-          <div class="w-full h-[450px] mx-5   rounded-lg   p-6">
-            <div className=" top-48 px-6">
-              <div className="place-items-center text-white flex justify-center">
-                <HiOutlineCamera className=" text-white w-8 h-8" />
-              </div>
-              <h2 className="text-white text-2xl text-center">RELIABILLITY</h2>
-              <p className="text-gray-300  text-sm text-start relative top-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-              </p>
-              <p className="text-gray-300  text-sm  text-center relative top-10">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-              </p>
-              <p></p>
-            </div>
-          </div>
-        </div>
-        <div class="flex items-center justify-center">
-          <div class="w-full h-[450px] mx-5   rounded-lg   p-6">
-            <div className=" top-48 px-6">
-              <div className="place-items-center text-white flex justify-center">
-                <GoCreditCard className=" text-white w-8 h-8" />
-              </div>
-              <h2 className="text-white text-2xl text-center">RELIABILLITY</h2>
-              <p className="text-gray-300  text-sm text-start relative top-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-              </p>
-              <p className="text-gray-300  text-sm  text-center relative top-10">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-              </p>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>  */}
-      <div class="flex flex-col md:flex-row flex-wrap w-full h-[550px]">
-  <div class="flex items-center justify-center w-full md:w-1/3">
-    <div class="w-full h-[450px] mx-5 rounded-lg p-6">
-      <div className="top-48 px-6">
-        <div className="text-white flex justify-center">
-          <FaRegArrowAltCircleDown className="text-white w-8 h-8" />
-        </div>
-        <h2 className="text-white text-2xl text-center">RELIABILLITY</h2>
-        <p className="text-gray-300 text-sm text-start relative top-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-        <p className="text-gray-300 text-sm text-center relative top-10">
-          Lorem Ipsum has been the industry's standard dummy.
-        </p>
-      </div>
-    </div>
-  </div>
+    // Set themes
+    root.setThemes([am5themes_Animated.new(root)]);
 
-  <div class="flex items-center justify-center w-full md:w-1/3">
-    <div class="w-full h-[450px] mx-5 rounded-lg p-6">
-      <div className="top-48 px-6">
-        <div className="text-white flex justify-center">
-          <HiOutlineCamera className="text-white w-8 h-8" />
-        </div>
-        <h2 className="text-white text-2xl text-center">RELIABILLITY</h2>
-        <p className="text-gray-300 text-sm text-start relative top-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-        <p className="text-gray-300 text-sm text-center relative top-10">
-          Lorem Ipsum has been the industry's standard dummy.
-        </p>
-      </div>
-    </div>
-  </div>
+    // Create chart
+    let chart = root.container.children.push(
+      am5percent.PieChart.new(root, {
+        endAngle: 270,
+        layout: root.verticalLayout,
+        innerRadius: am5.percent(60),
+      })
+    );
 
-  <div class="flex items-center justify-center w-full md:w-1/3">
-    <div class="w-full h-[450px] mx-5 rounded-lg p-6">
-      <div className="top-48 px-6">
-        <div className="text-white flex justify-center">
-          <GoCreditCard className="text-white w-8 h-8" />
-        </div>
-        <h2 className="text-white text-2xl text-center">RELIABILLITY</h2>
-        <p className="text-gray-300 text-sm text-start relative top-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-        <p className="text-gray-300 text-sm text-center relative top-10">
-          Lorem Ipsum has been the industry's standard dummy.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+    // Create series
+    let series = chart.series.push(
+      am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category",
+        endAngle: 270,
+      })
+    );
 
-    </div>
-    </>
-  );
-}
+    // Remove labels
+    series.labels.template.set("forceHidden", true);
+    series.ticks.template.set("forceHidden", true);
+
+    // Set colors for the series
+    series.set(
+      "colors",
+      am5.ColorSet.new(root, {
+        colors: [
+          am5.color(0x9fa1a6),
+          am5.color(0xf2aa6b),
+          am5.color(0xf28f6b),
+        ],
+      })
+    );
+
+    // Configure gradient
+    let gradient = am5.RadialGradient.new(root, {
+      stops: [
+        { color: am5.color(0x000000) },
+        { color: am5.color(0x000000) },
+        {},
+      ],
+    });
+
+    // Configure slices
+    series.slices.template.setAll({
+      fillGradient: gradient,
+      strokeWidth: 2,
+      stroke: am5.color(0xffffff),
+      cornerRadius: 10,
+      shadowOpacity: 0.1,
+      shadowOffsetX: 2,
+      shadowOffsetY: 2,
+      shadowColor: am5.color(0x000000),
+      fillPattern: am5.GrainPattern.new(root, {
+        maxOpacity: 0.2,
+        density: 0.5,
+        colors: [am5.color(0x000000)],
+      }),
+    });
+
+    series.slices.template.states.create("hover", {
+      shadowOpacity: 1,
+      shadowBlur: 10,
+    });
+
+    // Set series data
+    series.data.setAll([
+      { category: "Silver", value: 200 },
+      { category: "Gold", value: 500 },
+      { category: "Agua", value: 300 },
+    ]);
+
+    // Animate series
+    series.appear(1000, 100);
+
+    // Clean up chart on component unmount
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return <div id="chartdiv" style={{ width: "100%", height: "300px" }}></div>;
+};
+
+export default DonutChart;

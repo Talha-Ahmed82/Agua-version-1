@@ -29,7 +29,7 @@ const packageData = [
     return (
       <div
         id="users"
-        className="rounded-b-xl border border-[#D2D8E1] bg-[#D2D8E1] px-5 pb-2.5 pt-6 shadow-default dark:border-[#24303F] dark:bg-boxdark sm:px-7.5 xl:pb-1"
+        className="rounded-b-xl border border-[#D2D8E1] bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-[#24303F] dark:bg-boxdark sm:px-7.5 xl:pb-1"
       >
         <h4 className="mb-6 text-xl font-semibold text-gray-500 dark:text-white">
           Users
